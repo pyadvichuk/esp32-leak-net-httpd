@@ -1,0 +1,22 @@
+menu "HTTPD"
+    config WBOX_HTTPD_TRANSPORT_SSL
+        bool "Enable SSL encryption"
+        default n
+        select ESP_HTTPS_SERVER_ENABLE
+        select ESP_TLS_SERVER
+        help
+            This option enables encryption for http daemon.
+
+    config WBOX_HTTPD_MAX_CONNECTION
+        int "Maximum parallel connections"
+        default 4
+        help
+            Maximum parallel connections
+
+    config WBOX_HTTPD_CONNECTION_EXPIRE
+        int "Time to connection expiration in seconds"
+        default 300
+        help
+            Time to  connection expiration in seconds
+
+endmenu

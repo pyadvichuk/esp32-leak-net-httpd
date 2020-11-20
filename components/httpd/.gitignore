@@ -1,0 +1,5 @@
+generated
+scripts/__pycache__
+scripts/*.pyc
+static/src/scripts/__pycache__
+static/src/scripts/*.pyc
